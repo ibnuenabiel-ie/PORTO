@@ -106,7 +106,6 @@
       
       <!-- Profile Image -->
       <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-100 dark:border-blue-900 shadow-xl flex-shrink-0">
-        <!-- GAMBAR SAMPUL -->
         <img src="projects/profile1.jpg" alt="Ibnu Nabil Kristanto" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x400/2563eb/ffffff?text=Ibnu+Nabil'"/>
       </div>
     </section>
@@ -161,52 +160,97 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS & ORGANIZATION SECTION -->
     <section id="projects" class="space-y-8 scroll-mt-20">
       <div>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Projects</h2>
-        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">A showcase of my recent academic and professional work.</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Projects & Organization</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Pilih kategori di bawah untuk melihat detail karya proyek atau pengalaman organisasi.</p>
       </div>
-      
-      <!-- Project Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Pilihan Kategori Berfoto -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Tombol Projects -->
+        <button onclick="filterCategory('projects')" id="cat-btn-projects" 
+          class="group relative h-40 rounded-2xl overflow-hidden border-2 border-blue-500 shadow-md transition-all text-left focus:outline-none cursor-pointer">
+          <img src="projects/his1.jpg" alt="Projects" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] bg-blue-600 px-2 py-0.5 rounded-full font-semibold uppercase tracking-wider">Kategori</span>
+            <h3 class="text-xl font-bold mt-1">Projects</h3>
+            <p class="text-xs text-slate-300">Human Integrated Systems & Production Analysis</p>
+          </div>
+        </button>
+
+        <!-- Tombol Organization -->
+        <button onclick="filterCategory('organizations')" id="cat-btn-organizations" 
+          class="group relative h-40 rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-800 opacity-70 hover:opacity-100 transition-all text-left focus:outline-none cursor-pointer">
+          <img src="https://placehold.co/800x450/1e293b/ffffff?text=Organization+Photo" alt="Organization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="text-[10px] bg-purple-600 px-2 py-0.5 rounded-full font-semibold uppercase tracking-wider">Kategori</span>
+            <h3 class="text-xl font-bold mt-1">Organization</h3>
+            <p class="text-xs text-slate-300">Pengalaman & Kepemimpinan Organisasi</p>
+          </div>
+        </button>
+      </div>
+
+      <!-- KONTEN PROJECTS -->
+      <div id="content-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- PROJECT FORMAT 1 (Siap Isi) -->
+        <!-- Project 1: HIS -->
         <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
-          <!-- Thumbnail Gambar (Gunakan image_464edf.png sebagai referensi) -->
           <div class="w-full bg-slate-100 dark:bg-slate-800 relative aspect-video">
             <img src="projects/his1.jpg" alt="Project Human Integrated Systems" class="w-full h-full object-cover">
           </div>
-          <!-- Info Proyek -->
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex flex-wrap gap-2 mb-3">
-              <!-- Tags / Kategori -->
-              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">[Tag 1]</span>
-              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">[Tag 2]</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">Industrial Engineering</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">Ergonomics</span>
             </div>
             <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Project Human Integrated Systems</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow">
-              [Deskripsi singkat mengenai proyek yang Anda kerjakan, tools yang digunakan, dan hasil akhirnya.]
+              Laporan akhir analisis interaksi manusia dan sistem kerja, biomekanika, anthropometri, serta keselamatan kerja.
             </p>
+            <button onclick="openModal('Project Human Integrated Systems', 'projects/his1.jpg', 'Laporan akhir analisis sistem interaksi manusia-mesin. Proyek ini mencakup pengukuran Anthropometri, Biomechanic analysis, Manual Handling design, Reliability, serta Safety & Health in Workstation untuk meningkatkan efisiensi dan keamanan kerja.')" 
+              class="mt-auto px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-xl transition text-center cursor-pointer">
+              Lihat Detail
+            </button>
           </div>
         </div>
 
-        <!-- PROJECT FORMAT 2 (Siap Isi) -->
+        <!-- Project 2: POA -->
         <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
-  <div class="w-full bg-slate-100 dark:bg-slate-800 relative aspect-video">
-    <img src="projects/poa1.jpg" alt="Project Production & Operation Analysis" class="w-full h-full object-cover">
-  </div>
-  <div class="p-6 flex flex-col flex-grow">
-    <div class="flex flex-wrap gap-2 mb-3">
-      <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">[Tag 1]</span>
-    </div>
-    <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Project Production & Operation Analysis</h3>
-    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow">
-      [Deskripsi singkat proyek kedua Anda.]
-    </p>
-  </div>
-</div>
+          <div class="w-full bg-slate-100 dark:bg-slate-800 relative aspect-video">
+            <img src="projects/poa1.jpg" alt="Project Production & Operation Analysis" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">Production Analysis</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">Forecasting</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Project Production & Operation Analysis</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow">
+              Analisis perencanaan produksi, perencanaan persediaan (MPS, MRP, Lot Sizing), serta evaluasi kapasitas kerja.
+            </p>
+            <button onclick="openModal('Project Production & Operation Analysis', 'projects/poa1.jpg', 'Laporan lengkap analisis sistem produksi dan operasi. Berisi pengolahan data Forecasting, Agregate Planning, MPS, Inventory Control, serta penentuan Lot Sizing optimal untuk meminimalkan total biaya operasional.')" 
+              class="mt-auto px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-xl transition text-center cursor-pointer">
+              Lihat Detail
+            </button>
+          </div>
+        </div>
 
+      </div>
+
+      <!-- KONTEN ORGANIZATION -->
+      <div id="content-organizations" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm p-6">
+          <span class="text-xs px-2.5 py-1 rounded-full bg-purple-50 text-purple-600 dark:bg-purple-950/60 dark:text-purple-300 font-medium">Himpunan Mahasiswa</span>
+          <h3 class="text-xl font-bold mt-3 mb-1 text-slate-900 dark:text-white">Pengurus / Koordinator</h3>
+          <p class="text-xs text-slate-500 mb-3">2024 - Sekarang</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">
+            Mengelola dan mengoordinasikan kegiatan operasional acara internal dan pengabdian masyarakat.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -279,14 +323,12 @@
             <!-- Phone -->
             <a href="tel:+6281285914977" class="flex items-center gap-4 text-blue-100 hover:text-white transition w-fit">
               <div class="p-3 bg-blue-700 rounded-full"><i data-lucide="phone" class="w-5 h-5"></i></div>
-              <span class="font-medium">[+62 81285914977]</span>
+              <span class="font-medium">+62 81285914977</span>
             </a>
             <!-- LinkedIn -->
             <a href="https://linkedin.com/in/ibnu-nabil-kristanto-862ba8233/" target="_blank" class="flex items-center gap-4 text-blue-100 hover:text-white transition w-fit">
               <div class="p-3 bg-blue-700 rounded-full"><i data-lucide="linkedin" class="w-5 h-5"></i></div>
               <span class="font-medium">https://www.linkedin.com/in/ibnu-nabil-kristanto-862ba8233/</span>
-            </a>
-        
             </a>
           </div>
         </div>
@@ -300,6 +342,16 @@
 
   </main>
 
+  <!-- MODAL POPUP DETAIL -->
+  <div id="modal-detail" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white text-2xl font-bold">&times;</button>
+      <img id="modal-img" src="" alt="" class="w-full h-auto max-h-96 object-contain bg-slate-100 dark:bg-slate-800 rounded-xl mb-4">
+      <h3 id="modal-title" class="text-2xl font-bold text-slate-900 dark:text-white mb-2"></h3>
+      <p id="modal-desc" class="text-slate-600 dark:text-slate-300 text-sm whitespace-pre-line leading-relaxed"></p>
+    </div>
+  </div>
+
   <!-- JAVASCRIPT LOGIC -->
   <script>
     // Initialize Lucide Icons
@@ -308,10 +360,7 @@
     // 1. TOGGLE DARK / LIGHT MODE
     const themeToggleBtn = document.getElementById('theme-toggle');
     themeToggleBtn.addEventListener('click', () => {
-      // Toggle the 'dark' class on the HTML element
       document.documentElement.classList.toggle('dark');
-      
-      // Update icons if needed (optional since CSS handles hidden/block based on dark class)
     });
 
     // 2. TOGGLE MOBILE MENU
@@ -329,6 +378,46 @@
         mobileMenu.classList.remove('flex');
       });
     });
+
+    // 3. FILTER PROJECTS vs ORGANIZATION
+    function filterCategory(category) {
+      const projContent = document.getElementById('content-projects');
+      const orgContent = document.getElementById('content-organizations');
+      const btnProjects = document.getElementById('cat-btn-projects');
+      const btnOrgs = document.getElementById('cat-btn-organizations');
+
+      if (category === 'projects') {
+        projContent.classList.remove('hidden');
+        orgContent.classList.add('hidden');
+        
+        btnProjects.classList.add('border-blue-500', 'opacity-100');
+        btnProjects.classList.remove('opacity-70', 'border-slate-200', 'dark:border-slate-800');
+        
+        btnOrgs.classList.remove('border-blue-500', 'opacity-100');
+        btnOrgs.classList.add('opacity-70', 'border-slate-200', 'dark:border-slate-800');
+      } else {
+        projContent.classList.add('hidden');
+        orgContent.classList.remove('hidden');
+        
+        btnOrgs.classList.add('border-blue-500', 'opacity-100');
+        btnOrgs.classList.remove('opacity-70', 'border-slate-200', 'dark:border-slate-800');
+        
+        btnProjects.classList.remove('border-blue-500', 'opacity-100');
+        btnProjects.classList.add('opacity-70', 'border-slate-200', 'dark:border-slate-800');
+      }
+    }
+
+    // 4. MODAL POPUP LOGIC
+    function openModal(title, imgSrc, desc) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-img').src = imgSrc;
+      document.getElementById('modal-desc').innerText = desc;
+      document.getElementById('modal-detail').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('modal-detail').classList.add('hidden');
+    }
   </script>
 </body>
 </html>
