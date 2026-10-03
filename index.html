@@ -184,7 +184,7 @@
         <!-- Tombol Organization -->
         <button onclick="filterCategory('organizations')" id="cat-btn-organizations" 
           class="group relative h-40 rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-800 opacity-70 hover:opacity-100 transition-all text-left focus:outline-none cursor-pointer">
-          <img src="https://placehold.co/800x450/1e293b/ffffff?text=Organization+Photo" alt="Organization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="projects/wfps1.jpg" alt="Organization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=Organization+Photo'">
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent"></div>
           <div class="absolute bottom-4 left-4 right-4 text-white">
             <span class="text-[10px] bg-purple-600 px-2 py-0.5 rounded-full font-semibold uppercase tracking-wider">Kategori</span>
@@ -243,14 +243,56 @@
 
       <!-- KONTEN ORGANIZATION -->
       <div id="content-organizations" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm p-6">
-          <span class="text-xs px-2.5 py-1 rounded-full bg-purple-50 text-purple-600 dark:bg-purple-950/60 dark:text-purple-300 font-medium">Himpunan Mahasiswa</span>
-          <h3 class="text-xl font-bold mt-3 mb-1 text-slate-900 dark:text-white">Pengurus / Koordinator</h3>
-          <p class="text-xs text-slate-500 mb-3">2024 - Sekarang</p>
-          <p class="text-slate-600 dark:text-slate-400 text-sm">
-            Mengelola dan mengoordinasikan kegiatan operasional acara internal dan pengabdian masyarakat.
-          </p>
+        
+        <!-- Welcome Farewell Party 2025 -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+          <div class="w-full bg-slate-100 dark:bg-slate-800 relative aspect-video swiper mySwiper group">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="projects/wfps1.jpg" alt="Welcome Farewell Party 2025 - 1" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=wfps1'"></div>
+              <div class="swiper-slide"><img src="projects/wfps2.jpg" alt="Welcome Farewell Party 2025 - 2" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=wfps2'"></div>
+              <div class="swiper-slide"><img src="projects/wfps3.jpg" alt="Welcome Farewell Party 2025 - 3" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=wfps3'"></div>
+            </div>
+            <div class="swiper-button-next opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="swiper-button-prev opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs px-2.5 py-1 rounded-full bg-purple-50 text-purple-600 dark:bg-purple-950/60 dark:text-purple-300 font-medium">Organization</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">Media Division</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Welcome Farewell Party 2025</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow">
+              Participated in the Media Division for the 2025 event, serving as the Director of Short Films and Event Documentation. Responsible for coordinating short film production and managing event documentation throughout the event.
+            </p>
+          </div>
         </div>
+
+        <!-- Welcome Farewell Party 2024 -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+          <div class="w-full bg-slate-100 dark:bg-slate-800 relative aspect-video swiper mySwiper group">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="projects/wfp1.jpg" alt="Welcome Farewell Party 2024 - 1" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=wfp1'"></div>
+              <div class="swiper-slide"><img src="projects/wfp2.jpg" alt="Welcome Farewell Party 2024 - 2" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=wfp2'"></div>
+            </div>
+            <div class="swiper-button-next opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="swiper-button-prev opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="text-xs px-2.5 py-1 rounded-full bg-purple-50 text-purple-600 dark:bg-purple-950/60 dark:text-purple-300 font-medium">Organization</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300 font-medium">Publication Division</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Welcome Farewell Party 2024</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow">
+              My experience in participating in an event held by the organization HIMTRI, I submitted a publication division at the WFP (Welcoming Farewell Party) event for the industrial class of '23 and above. Here I started by taking a video shoot and helping my friend edit the video, and during the event I did a photo shoot to document the event.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -418,6 +460,21 @@
     function closeModal() {
       document.getElementById('modal-detail').classList.add('hidden');
     }
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   </script>
 </body>
 </html>
